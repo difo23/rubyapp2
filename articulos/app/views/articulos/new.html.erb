@@ -1,0 +1,89 @@
+<h1>New articulo</h1>
+
+<% form_for(@articulo) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :id_articulo %><br />
+    <%= f.text_field :id_articulo %>
+  </p>
+  <p>
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    <%= f.label :decripcion %><br />
+    <%= f.text_area :decripcion %>
+  </p>
+  <p>
+    <%= f.label :cantidad %><br />
+    <%= f.text_field :cantidad %>
+  </p>
+  <p>
+    <%= f.label :vendedor %><br />
+    <%= f.text_field :vendedor %>
+  </p>
+  <p>
+    <%= f.label :comprado_en %><br />
+    <%= f.text_field :comprado_en %>
+  </p>
+  <p>
+    <%= f.label :peso_kg %><br />
+    <%= f.text_field :peso_kg %>
+  </p>
+  <p>
+    <%= f.label :peso_lbs %><br />
+    <%= f.text_field :peso_lbs %>
+  </p>
+  <p>
+    <%= f.label :precio_us %><br />
+    <%= f.text_field :precio_us %>
+  </p>
+  <p>
+    <%= f.label :precio_rd %><br />
+    <%= f.text_field :precio_rd %>
+  </p>
+  <p>
+    <%= f.label :costo_envio_rd %><br />
+    <%= f.text_field :costo_envio_rd %>
+  </p>
+  <p>
+    <%= f.label :centro_envio %><br />
+    <%= f.text_field :centro_envio %>
+  </p>
+  <p>
+    <%= f.label :tracking_number %><br />
+    <%= f.text_field :tracking_number %>
+  </p>
+  <p>
+    <%= f.label :costo_gestion %><br />
+    <%= f.text_field :costo_gestion %>
+  </p>
+  <p>
+    <%= f.label :ITBS %><br />
+    <%= f.text_field :ITBS %>
+  </p>
+  <p>
+    <%= f.label :transporte_stgo_Lvg %><br />
+    <%= f.text_field :transporte_stgo_Lvg %>
+  </p>
+  <p>
+    <%= f.label :fecha_ingreso %><br />
+    <%= f.date_select :fecha_ingreso %>
+  </p>
+  <p>
+    <%= f.label :total_costo %><br />
+    <%= f.text_field :total_costo %>
+  </p>
+  
+  <p>
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </p>
+  
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', articulos_path %>

@@ -1,0 +1,161 @@
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (181.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (224.1ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticulos (20140207212209)
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE TABLE "articulos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "id_articulo" decimal, "nombre" varchar(255), "decripcion" text, "cantidad" decimal, "vendedor" varchar(255), "comprado_en" varchar(255), "peso_kg" decimal, "peso_lbs" decimal, "precio_us" decimal, "precio_rd" decimal, "costo_envio_rd" decimal, "centro_envio" varchar(255), "tracking_number" varchar(255), "costo_gestion" decimal, "ITBS" decimal, "transporte_stgo_Lvg" decimal, "fecha_ingreso" date, "total_costo" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20140207212209')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("articulos")[0m
+
+
+Processing ArticulosController#index (for 127.0.0.1 at 2014-02-07 17:23:09) [GET]
+  [4;36;1mArticulo Load (0.8ms)[0m   [0;1mSELECT * FROM "articulos" [0m
+Rendering template within layouts/articulos
+Rendering articulos/index
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://localhost/articulos/]
+
+
+Processing ArticulosController#new (for 127.0.0.1 at 2014-02-07 17:23:21) [GET]
+Rendering template within layouts/articulos
+Rendering articulos/new
+Completed in 92ms (View: 73, DB: 0) | 200 OK [http://localhost/articulos/new]
+
+
+Processing ArticulosController#create (for 127.0.0.1 at 2014-02-07 17:24:52) [POST]
+  Parameters: {"authenticity_token"=>"RPQ9KfxcXhmDlFCUdHQwubU8sFBN/XEu8kicC0AuON0=", "commit"=>"Create", "articulo"=>{"centro_envio"=>"MBE", "vendedor"=>"Juan lopez", "fecha_ingreso(3i)"=>"7", "precio_rd"=>"500", "costo_gestion"=>"30", "comprado_en"=>"Ebay", "decripcion"=>"Tablet android sin SD", "precio_us"=>"5", "peso_kg"=>"6", "nombre"=>"tablet", "total_costo"=>"7000", "costo_envio_rd"=>"100", "ITBS"=>"15", "cantidad"=>"1", "id_articulo"=>"56", "fecha_ingreso(1i)"=>"2014", "transporte_stgo_Lvg"=>"80", "fecha_ingreso(2i)"=>"2", "tracking_number"=>"12345479441219412369", "peso_lbs"=>"7"}}
+  [4;35;1mArticulo Create (0.6ms)[0m   [0mINSERT INTO "articulos" ("vendedor", "centro_envio", "precio_rd", "fecha_ingreso", "costo_gestion", "decripcion", "comprado_en", "created_at", "nombre", "peso_kg", "precio_us", "costo_envio_rd", "total_costo", "id_articulo", "cantidad", "ITBS", "updated_at", "transporte_stgo_Lvg", "peso_lbs", "tracking_number") VALUES('Juan lopez', 'MBE', 500.0, '2014-02-07', 30.0, 'Tablet android sin SD', 'Ebay', '2014-02-07 21:24:52', 'tablet', 6.0, 5.0, 100.0, 7000.0, 56.0, 1.0, 15.0, '2014-02-07 21:24:52', 80.0, 7.0, '12345479441219412369')[0m
+Redirected to http://localhost:3000/articulos/1
+Completed in 428ms (DB: 1) | 302 Found [http://localhost/articulos]
+
+
+Processing ArticulosController#show (for 127.0.0.1 at 2014-02-07 17:24:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticulo Load (0.4ms)[0m   [0;1mSELECT * FROM "articulos" WHERE ("articulos"."id" = 1) [0m
+Rendering template within layouts/articulos
+Rendering articulos/show
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/articulos/1]
+
+
+Processing ArticulosController#index (for 127.0.0.1 at 2014-02-07 17:25:01) [GET]
+  [4;35;1mArticulo Load (1.5ms)[0m   [0mSELECT * FROM "articulos" [0m
+Rendering template within layouts/articulos
+Rendering articulos/index
+Completed in 21ms (View: 11, DB: 2) | 200 OK [http://localhost/articulos]
+
+
+Processing ArticulosController#new (for 127.0.0.1 at 2014-02-07 17:30:45) [GET]
+Rendering template within layouts/articulos
+Rendering articulos/new
+Completed in 52ms (View: 40, DB: 0) | 200 OK [http://localhost/articulos/new]
+
+
+Processing ArticulosController#index (for 127.0.0.1 at 2014-02-07 17:30:48) [GET]
+  [4;36;1mArticulo Load (0.7ms)[0m   [0;1mSELECT * FROM "articulos" [0m
+Rendering template within layouts/articulos
+Rendering articulos/index
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/articulos]
+
+
+Processing ArticulosController#edit (for 127.0.0.1 at 2014-02-07 17:30:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticulo Load (0.6ms)[0m   [0mSELECT * FROM "articulos" WHERE ("articulos"."id" = 1) [0m
+Rendering template within layouts/articulos
+Rendering articulos/edit
+Completed in 43ms (View: 36, DB: 1) | 200 OK [http://localhost/articulos/1/edit]
+
+
+Processing ArticulosController#index (for 127.0.0.1 at 2014-02-07 17:30:58) [GET]
+  [4;36;1mArticulo Load (0.9ms)[0m   [0;1mSELECT * FROM "articulos" [0m
+Rendering template within layouts/articulos
+Rendering articulos/index
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/articulos]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticulos (20140207212209)
+Migrating to AddStatusToArticulos (20140207214933)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "articulos" ADD "status" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20140207214933')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("articulos")[0m
+
+
+Processing ArticulosController#index (for 127.0.0.1 at 2014-02-07 17:53:14) [GET]
+  [4;35;1mArticulo Load (0.9ms)[0m   [0mSELECT * FROM "articulos" [0m
+Rendering template within layouts/articulos
+Rendering articulos/index
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/articulos]
+
+
+Processing ArticulosController#index (for 127.0.0.1 at 2014-02-07 17:53:20) [GET]
+  [4;36;1mArticulo Load (0.8ms)[0m   [0;1mSELECT * FROM "articulos" [0m
+Rendering template within layouts/articulos
+Rendering articulos/index
+Completed in 36ms (View: 25, DB: 1) | 200 OK [http://localhost/articulos]
+
+
+Processing ArticulosController#index (for 127.0.0.1 at 2014-02-07 18:00:38) [GET]
+  [4;35;1mArticulo Load (0.8ms)[0m   [0mSELECT * FROM "articulos" [0m
+Rendering template within layouts/articulos
+Rendering articulos/index
+Completed in 30ms (View: 20, DB: 1) | 200 OK [http://localhost/articulos]
+
+
+Processing ArticulosController#edit (for 127.0.0.1 at 2014-02-07 18:00:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticulo Load (0.5ms)[0m   [0;1mSELECT * FROM "articulos" WHERE ("articulos"."id" = 1) [0m
+Rendering template within layouts/articulos
+Rendering articulos/edit
+Completed in 55ms (View: 48, DB: 0) | 200 OK [http://localhost/articulos/1/edit]
+
+
+Processing ArticulosController#update (for 127.0.0.1 at 2014-02-07 18:00:53) [PUT]
+  Parameters: {"authenticity_token"=>"RPQ9KfxcXhmDlFCUdHQwubU8sFBN/XEu8kicC0AuON0=", "commit"=>"Update", "articulo"=>{"centro_envio"=>"MBE", "vendedor"=>"Juan lopez", "fecha_ingreso(3i)"=>"7", "precio_rd"=>"500", "costo_gestion"=>"30", "comprado_en"=>"Ebay", "decripcion"=>"Tablet android sin SD", "precio_us"=>"5", "peso_kg"=>"6", "nombre"=>"tablet", "status"=>"Almacen", "total_costo"=>"7000", "costo_envio_rd"=>"100", "ITBS"=>"15", "cantidad"=>"1", "id_articulo"=>"56", "fecha_ingreso(1i)"=>"2014", "transporte_stgo_Lvg"=>"80", "fecha_ingreso(2i)"=>"2", "tracking_number"=>"12345479441219412369", "peso_lbs"=>"7"}, "id"=>"1"}
+  [4;35;1mArticulo Load (0.4ms)[0m   [0mSELECT * FROM "articulos" WHERE ("articulos"."id" = 1) [0m
+  [4;36;1mArticulo Update (0.4ms)[0m   [0;1mUPDATE "articulos" SET "status" = 'Almacen', "updated_at" = '2014-02-07 22:00:53' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/articulos/1
+Completed in 404ms (DB: 1) | 302 Found [http://localhost/articulos/1]
+
+
+Processing ArticulosController#show (for 127.0.0.1 at 2014-02-07 18:00:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticulo Load (0.5ms)[0m   [0mSELECT * FROM "articulos" WHERE ("articulos"."id" = 1) [0m
+Rendering template within layouts/articulos
+Rendering articulos/show
+Completed in 23ms (View: 13, DB: 0) | 200 OK [http://localhost/articulos/1]
+
+
+Processing ArticulosController#index (for 127.0.0.1 at 2014-02-07 18:00:58) [GET]
+  [4;36;1mArticulo Load (0.7ms)[0m   [0;1mSELECT * FROM "articulos" [0m
+Rendering template within layouts/articulos
+Rendering articulos/index
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/articulos]

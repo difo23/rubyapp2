@@ -1,0 +1,41 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id_articulo: 9.99
+  nombre: MyString
+  decripcion: MyText
+  cantidad: 9.99
+  vendedor: MyString
+  comprado_en: MyString
+  peso_kg: 9.99
+  peso_lbs: 9.99
+  precio_us: 9.99
+  precio_rd: 9.99
+  costo_envio_rd: 9.99
+  centro_envio: MyString
+  tracking_number: MyString
+  costo_gestion: 9.99
+  ITBS: 9.99
+  transporte_stgo_Lvg: 9.99
+  fecha_ingreso: 2014-02-07
+  total_costo: 9.99
+
+two:
+  id_articulo: 9.99
+  nombre: MyString
+  decripcion: MyText
+  cantidad: 9.99
+  vendedor: MyString
+  comprado_en: MyString
+  peso_kg: 9.99
+  peso_lbs: 9.99
+  precio_us: 9.99
+  precio_rd: 9.99
+  costo_envio_rd: 9.99
+  centro_envio: MyString
+  tracking_number: MyString
+  costo_gestion: 9.99
+  ITBS: 9.99
+  transporte_stgo_Lvg: 9.99
+  fecha_ingreso: 2014-02-07
+  total_costo: 9.99

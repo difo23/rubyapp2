@@ -1,0 +1,54 @@
+<h1>Listing articulos</h1>
+
+<table>
+  <tr>
+    <th>Id articulo</th>
+    <th>Nombre</th>
+    <th>Decripcion</th>
+    <th>Cantidad</th>
+    <th>Vendedor</th>
+    <th>Comprado en</th>
+    <th>Peso kg</th>
+    <th>Peso lbs</th>
+    <th>Precio us</th>
+    <th>Precio rd</th>
+    <th>Costo envio rd</th>
+    <th>Centro envio</th>
+    <th>Tracking number</th>
+    <th>Costo gestion</th>
+    <th>Itbs</th>
+    <th>Transporte stgo lvg</th>
+    <th>Fecha ingreso</th>
+    <th>Total costo</th>
+  </tr>
+
+<% @articulos.each do |articulo| %>
+  <tr>
+    <td><%=h articulo.id_articulo %></td>
+    <td><%=h articulo.nombre %></td>
+    <td><%=h articulo.decripcion %></td>
+    <td><%=h articulo.cantidad %></td>
+    <td><%=h articulo.vendedor %></td>
+    <td><%=h articulo.comprado_en %></td>
+    <td><%=h articulo.peso_kg %></td>
+    <td><%=h articulo.peso_lbs %></td>
+    <td><%=h articulo.precio_us %></td>
+    <td><%=h articulo.precio_rd %></td>
+    <td><%=h articulo.costo_envio_rd %></td>
+    <td><%=h articulo.centro_envio %></td>
+    <td><%=h articulo.tracking_number %></td>
+    <td><%=h articulo.costo_gestion %></td>
+    <td><%=h articulo.ITBS %></td>
+    <td><%=h articulo.transporte_stgo_Lvg %></td>
+    <td><%=h articulo.fecha_ingreso %></td>
+    <td><%=h articulo.total_costo %></td>
+    <td><%= link_to 'Show', articulo %></td>
+    <td><%= link_to 'Edit', edit_articulo_path(articulo) %></td>
+    <td><%= link_to 'Destroy', articulo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New articulo', new_articulo_path %>
